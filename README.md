@@ -1,7 +1,7 @@
-# La-Mouette-du-Dix-septième
-##Le magazine du dix-septième arrondissement
+# La Mouette du Dix-septième
+Le magazine du dix-septième arrondissement
 
-###À propos de moi
+##À propos de moi
 
 Moi, c'est Alexandra.
 
