@@ -1,0 +1,477 @@
+/* ==========================================
+   LA MOUETTE SAUVAGE
+   DESIGN ÉDITORIAL — PAGES ARTICLES
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --article-bg: #fffefa;
+  --article-text: #292a25;
+  --article-muted: #707168;
+  --article-green: #536b49;
+  --article-green-light: #e5eadf;
+  --article-line: #e7e7df;
+  --article-reading-width: 720px;
+}
+
+/* BASE */
+
+.article-page {
+  margin: 0;
+  padding: 0;
+  background: var(--article-bg);
+  color: var(--article-text);
+  font-family: "DM Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.article-page *,
+.article-page *::before,
+.article-page *::after {
+  box-sizing: border-box;
+}
+
+/* EN-TÊTE */
+
+.article-header {
+  min-height: 78px;
+  padding: 14px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--article-line);
+}
+
+.back-link {
+  display: flex;
+  flex: 0 0 44px;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: var(--article-text);
+  text-decoration: none;
+  border-radius: 50%;
+  transition: background .2s ease, color .2s ease;
+}
+
+.back-link svg {
+  display: block;
+  width: 30px;
+  height: 26px;
+}
+
+.back-link:hover {
+  color: var(--article-green);
+  background: var(--article-green-light);
+}
+
+.article-logo {
+  color: var(--article-text);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 600;
+  letter-spacing: -.7px;
+  text-decoration: none;
+}
+
+.article-logo:hover {
+  color: var(--article-green);
+}
+
+/* CONTENU PRINCIPAL */
+
+.article-content {
+  width: min(88%, 1060px);
+  margin: 54px auto 0;
+}
+
+/* RUBRIQUE */
+
+.article-category {
+  display: inline-block;
+  margin: 0 0 22px;
+  padding: 7px 12px;
+  border-radius: 3px;
+  background: var(--article-green-light);
+  color: #43563b;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* TITRE */
+
+.article-content h1 {
+  max-width: 900px;
+  margin: 0 0 22px;
+  color: #252620;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 3.5vw, 48px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -1.4px;
+  text-wrap: balance;
+}
+
+/* CHAPÔ */
+
+.article-intro {
+  max-width: 790px;
+  margin: 0 0 26px;
+  color: #62635b;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: clamp(17px, 2vw, 21px);
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* MÉTADONNÉES */
+
+.article-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 22px;
+  margin: 0 0 24px;
+  color: var(--article-muted);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.article-meta span + span::before {
+  content: "·";
+  margin-right: 22px;
+  color: #a3a398;
+}
+
+.article-meta span {
+  display: inline-flex;
+  align-items: center;
+}
+
+/* GRANDE PHOTO */
+
+.article-hero {
+  width: 100%;
+  margin: 0 0 54px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #f0f0e9;
+}
+
+.article-hero img {
+  display: block;
+  width: 100%;
+  max-height: 610px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* TEXTE DE L'ARTICLE */
+
+.article-body {
+  max-width: var(--article-reading-width);
+  margin: 0 auto;
+  color: #383932;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.9;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+.article-body p {
+  margin: 0 0 25px;
+}
+
+/* Premier paragraphe légèrement mis en valeur */
+.article-body p:first-child {
+  color: #34362e;
+  font-size: 18px;
+  line-height: 1.85;
+}
+
+/* BAS DE PAGE */
+
+.article-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 65px;
+  padding: 30px 20px 38px;
+  border-top: 1px solid var(--article-line);
+  color: var(--article-muted);
+  text-align: center;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.article-footer p {
+  margin: 0;
+}
+
+/* INTERACTIONS ACCESSIBLES */
+
+.back-link:focus-visible,
+.article-logo:focus-visible {
+  outline: 2px solid var(--article-green);
+  outline-offset: 4px;
+}
+
+/* TABLETTES */
+
+@media (max-width: 900px) {
+  .article-content {
+    width: 88%;
+    margin-top: 42px;
+  }
+
+  .article-content h1 {
+    font-size: clamp(34px, 5.5vw, 46px);
+    letter-spacing: -.8px;
+  }
+
+  .article-hero {
+    margin-bottom: 42px;
+  }
+
+  .article-body {
+    font-size: 16px;
+    line-height: 1.85;
+  }
+}
+
+/* TÉLÉPHONES */
+
+@media (max-width: 600px) {
+  .article-header {
+    min-height: 66px;
+    padding: 10px 5%;
+    gap: 12px;
+  }
+
+  .back-link {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .back-link svg {
+    width: 26px;
+    height: 23px;
+  }
+
+  .article-logo {
+    font-size: 21px;
+    letter-spacing: -.5px;
+    text-align: right;
+  }
+
+  .article-content {
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .article-category {
+    margin-bottom: 18px;
+    padding: 6px 9px;
+    font-size: 10px;
+  }
+
+  .article-content h1 {
+    margin-bottom: 17px;
+    font-size: clamp(31px, 8.5vw, 39px);
+    line-height: 1.13;
+    letter-spacing: -.7px;
+  }
+
+  .article-intro {
+    margin-bottom: 21px;
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .article-meta {
+    gap: 5px 12px;
+    margin-bottom: 20px;
+    font-size: 11px;
+  }
+
+  .article-meta span + span::before {
+    margin-right: 12px;
+  }
+
+  .article-hero {
+    margin-bottom: 32px;
+    border-radius: 4px;
+  }
+
+  .article-hero img {
+    aspect-ratio: 4 / 3;
+    max-height: none;
+  }
+
+  .article-body {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .article-body p {
+    margin-bottom: 22px;
+  }
+
+  .article-body p:first-child {
+    font-size: 16px;
+  }
+
+  .article-footer {
+    margin-top: 42px;
+    padding: 25px 12px 30px;
+  }
+}
+
+/* RESPECT DU CHOIX DE RÉDUCTION DES ANIMATIONS */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+
+/* ==========================================
+   BLOC D'INFORMATIONS PRATIQUES
+   EN FIN D'ARTICLE
+   ========================================== */
+
+.article-footer {
+  display: block;
+  max-width: 720px;
+  margin: 55px auto 45px;
+  padding: 26px 30px;
+  border: 1px solid #e2e5dc;
+  border-left: 4px solid #687c5d;
+  border-radius: 5px;
+  background: #f7f8f3;
+  color: #55594f;
+  text-align: left;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.article-footer p {
+  margin: 0;
+}
+
+/* Nom du magazine ou titre du bloc */
+.article-footer p br:first-of-type {
+  content: "";
+}
+
+/* Adaptation mobile */
+@media (max-width: 600px) {
+  .article-footer {
+    margin: 40px auto 30px;
+    padding: 20px;
+    font-size: 13px;
+  }
+}
+
+
+
+
+/* BLOC INFORMATIONS PRATIQUES */
+
+.article-footer {
+  max-width: 720px;
+  margin: 55px auto 45px;
+  padding: 28px 30px;
+  border: 1px solid #e2e5dc;
+  border-left: 4px solid #687c5d;
+  border-radius: 5px;
+  background: #f7f8f3;
+  color: #35372f;
+  text-align: left;
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+.article-footer p {
+  margin: 0;
+}
+
+.article-footer .practical-title {
+  margin-bottom: 22px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 23px;
+  font-weight: 600;
+}
+
+.article-footer .practical-label {
+  margin-bottom: 5px;
+  color: #687c5d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.article-footer .practical-address {
+  margin-bottom: 20px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid #d7dfd0;
+  border-radius: 4px;
+  color: #43563b;
+  background: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease;
+}
+
+.maps-link:hover {
+  background: #e8ede3;
+  border-color: #aab9a0;
+}
+
+.maps-link:focus-visible {
+  outline: 2px solid #536b49;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .article-footer {
+    margin: 40px auto 30px;
+    padding: 22px 20px;
+  }
+
+  .article-footer .practical-title {
+    font-size: 21px;
+  }
+
+  .maps-link {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

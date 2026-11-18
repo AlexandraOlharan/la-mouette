@@ -1,0 +1,310 @@
+/* ==========================================
+   LA MOUETTE SAUVAGE
+   RUBRIQUES — STYLE ÉDITORIAL
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+:root {
+  --rubric-bg: #fffefa;
+  --rubric-text: #292b25;
+  --rubric-muted: #72776d;
+  --rubric-green: #536b49;
+  --rubric-line: #e4e8df;
+}
+
+/* PAGE GÉNÉRALE */
+
+.rubric-page {
+  margin: 0;
+  padding: 0;
+  background: var(--rubric-bg);
+  color: var(--rubric-text);
+  font-family: "DM Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.rubric-page *,
+.rubric-page *::before,
+.rubric-page *::after {
+  box-sizing: border-box;
+}
+
+/* TITRE DE LA RUBRIQUE */
+
+.rubric-header {
+  position: relative;
+  padding: 55px 4.2% 33px;
+  border-bottom: 1px solid var(--rubric-line);
+}
+
+.rubric-header::before {
+  content: "LA MOUETTE SAUVAGE  /  LES RUBRIQUES";
+  display: block;
+  margin-bottom: 16px;
+  color: var(--rubric-green);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.rubric-header h1 {
+  margin: 0;
+  color: #252820;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+/* PETITE LIGNE VERTE SOUS LE TITRE */
+
+.rubric-header::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 4.2%;
+  width: 75px;
+  height: 2px;
+  background: var(--rubric-green);
+}
+
+/* LISTE DES ARTICLES */
+
+.rubric-list {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* UNE LIGNE PAR ARTICLE
+   Photo à gauche, titre à droite */
+
+.rubric-item {
+  display: grid;
+  grid-template-columns: minmax(250px, 40%) 1fr;
+  align-items: center;
+  column-gap: 5.8%;
+
+  min-height: 280px;
+  padding: 48px 4.2%;
+  border-bottom: 1px solid var(--rubric-line);
+  transition: background-color .25s ease;
+}
+
+.rubric-item:hover {
+  background-color: #f8faf5;
+}
+
+/* PHOTOGRAPHIE */
+
+.rubric-item-image {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #e8ebe3;
+  text-decoration: none;
+}
+
+.rubric-item-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.48 / 1;
+  object-fit: cover;
+  transition: transform .45s ease;
+}
+
+.rubric-item-image:hover img,
+.rubric-item:hover .rubric-item-image img {
+  transform: scale(1.035);
+}
+
+/* CONTENU À DROITE */
+
+.rubric-item-content {
+  min-width: 0;
+  max-width: 660px;
+}
+
+/* PETIT REPÈRE ÉDITORIAL */
+
+.rubric-item-content::before {
+  content: "À DÉCOUVRIR";
+  display: block;
+  margin-bottom: 16px;
+  color: var(--rubric-green);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+/* TITRE DE L'ARTICLE */
+
+.rubric-item-title {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(23px, 2.35vw, 32px);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -.35px;
+  overflow-wrap: break-word;
+}
+
+.rubric-item-title a {
+  color: var(--rubric-text);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.rubric-item-title a:hover,
+.rubric-item:hover .rubric-item-title a {
+  color: var(--rubric-green);
+}
+
+/* PETITE FLÈCHE SOUS LE TITRE */
+
+.rubric-item-content::after {
+  content: "Lire l'article  →";
+  display: block;
+  width: fit-content;
+  margin-top: 22px;
+  color: var(--rubric-green);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  transition: transform .2s ease;
+}
+
+.rubric-item:hover .rubric-item-content::after {
+  transform: translateX(4px);
+}
+
+/* RÉSUMÉ FACULTATIF */
+
+.rubric-item-description {
+  margin: 15px 0 0;
+  color: var(--rubric-muted);
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+/* ACCESSIBILITÉ */
+
+.rubric-item a:focus-visible {
+  outline: 2px solid var(--rubric-green);
+  outline-offset: 4px;
+}
+
+/* ==========================================
+   TABLETTE
+   ========================================== */
+
+@media (max-width: 800px) {
+  .rubric-header {
+    padding: 42px 5% 28px;
+  }
+
+  .rubric-header h1 {
+    font-size: 39px;
+  }
+
+  .rubric-header::after {
+    left: 5%;
+  }
+
+  .rubric-item {
+    grid-template-columns: minmax(200px, 42%) 1fr;
+    column-gap: 5%;
+    min-height: 230px;
+    padding: 36px 5%;
+  }
+
+  .rubric-item-title {
+    font-size: 23px;
+    line-height: 1.4;
+  }
+
+  .rubric-item-content::before {
+    margin-bottom: 12px;
+  }
+
+  .rubric-item-content::after {
+    margin-top: 17px;
+  }
+
+  .rubric-item-description {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 560px) {
+  .rubric-header {
+    padding: 33px 6% 25px;
+  }
+
+  .rubric-header::before {
+    margin-bottom: 12px;
+    font-size: 9px;
+    letter-spacing: 1.4px;
+  }
+
+  .rubric-header h1 {
+    font-size: 34px;
+  }
+
+  .rubric-header::after {
+    left: 6%;
+    width: 55px;
+  }
+
+  .rubric-item {
+    grid-template-columns: 1fr;
+    row-gap: 21px;
+    min-height: auto;
+    padding: 30px 6% 34px;
+  }
+
+  .rubric-item-image img {
+    aspect-ratio: 1.5 / 1;
+  }
+
+  .rubric-item-content::before {
+    margin-bottom: 10px;
+    font-size: 9px;
+  }
+
+  .rubric-item-title {
+    font-size: 24px;
+    line-height: 1.38;
+  }
+
+  .rubric-item-content::after {
+    margin-top: 16px;
+  }
+
+  .rubric-item-description {
+    margin-top: 11px;
+    font-size: 14px;
+  }
+}
+
+/* ANIMATIONS RÉDUITES */
+
+@media (prefers-reduced-motion: reduce) {
+  .rubric-item,
+  .rubric-item-image img,
+  .rubric-item-title a,
+  .rubric-item-content::after {
+    transition: none;
+  }
+}

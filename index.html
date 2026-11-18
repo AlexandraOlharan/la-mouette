@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="La mouette sauvage, le magazine du 17ème arrondissement de Paris.">
+
+  <title>La mouette sauvage — Accueil</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="script.js" defer></script>
+  <script src="articles.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Ouvrir le menu"
+      aria-expanded="false"
+      aria-controls="site-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <a class="brand" href="index.html">
+  <img
+    class="brand-logo"
+    src="logo1.png"
+    alt="Logo de La mouette sauvage"
+  >
+
+  <div class="brand-text">
+    <span class="tagline">Le magazine du 17ème arrondissement</span>
+    <strong>La mouette sauvage</strong>
+  </div>
+</a>
+  </header>
+
+  <nav class="main-nav" aria-label="Rubriques">
+    <a href="evenements.html">Évènements</a>
+    <a href="adresses.html">Adresses</a>
+    <a href="portraits.html">Portraits</a>
+    <a href="patrimoine.html">Patrimoine</a>
+  </nav>
+
+  <main class="home">
+
+    <img
+      class="hero"
+      src="images/paris.png"
+      alt="Panorama de Paris et tour Eiffel"
+    >
+
+    <section class="home-featured">
+      <h2>Les articles à la une</h2>
+      <div id="articles-une" class="featured-grid"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <a class="footer-logo" href="index.html">
+        La mouette sauvage
+      </a>
+      <p class="footer-tagline">
+        Le magazine du 17ème arrondissement
+      </p>
+      <p class="footer-description">
+        Un regard singulier sur les rues, les lieux
+        et les habitants du 17ème.
+      </p>
+    </div>
+
+    <div class="footer-links">
+      <div class="footer-column">
+        <h2>Explorer</h2>
+        <a href="evenements.html">Évènements</a>
+        <a href="adresses.html">Adresses</a>
+        <a href="portraits.html">Portraits</a>
+        <a href="patrimoine.html">Patrimoine</a>
+      </div>
+
+      <div class="footer-column">
+        <h2>Le magazine</h2>
+        <a href="apropos.html">À propos de moi</a>
+        <a href="abbonement.html">S'abonner gratuitement</a>
+        <a href="mailto:alexandraolharan@gmail.com">
+          Me contacter
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>PARIS · XVII</span>
+      <a href="index.html">Retour à l’accueil ↑</a>
+    </div>
+
+  </div>
+</footer>
+
+  
+
+
+
+
+
+<nav class="drawer" id="site-menu" aria-label="Menu principal" hidden>
+  
+
+  <div class="drawer-divider"></div>
+
+  <div class="drawer-section drawer-secondary">
+    <p class="drawer-heading"></p>
+
+    <a href="mailto:alexandraolharan@gmail.com">
+          Me contacter
+        </a>
+    <a href="apropos.html">À propos de moi</a>
+    <a class="drawer-subscribe" href="abbonement.html">
+      S’abonner gratuitement
+    </a>
+  </div>
+</nav>
+
+
+
+
+</body>
+</html>

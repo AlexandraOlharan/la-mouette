@@ -1,0 +1,515 @@
+/* ==========================================
+   LA MOUETTE SAUVAGE
+   PAGE D'ABONNEMENT
+   Univers éditorial — Paris XVII
+========================================== */
+
+/* ------------------------------------------
+   BASE DE LA PAGE
+------------------------------------------ */
+
+.subscription-body {
+  background: #faf9f5;
+  color: #30332b;
+}
+
+.subscription-page {
+  width: min(1160px, 88%);
+  margin: 0 auto;
+}
+
+
+
+/* ------------------------------------------
+   INTRODUCTION
+------------------------------------------ */
+
+.subscription-hero {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(35px, 7vw, 95px);
+  padding: 75px 0 85px;
+}
+
+.subscription-copy {
+  max-width: 560px;
+}
+
+.subscription-eyebrow {
+  margin: 0 0 24px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.7;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #6a795d;
+}
+
+.subscription-copy h1 {
+  margin: 0 0 28px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(38px, 5vw, 64px);
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -1.8px;
+  color: #30332b;
+}
+
+.subscription-copy h1 em {
+  font-weight: 400;
+  color: #647658;
+}
+
+.subscription-intro {
+  max-width: 490px;
+  margin: 0 0 17px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #66685f;
+}
+
+.subscription-promise {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.promise-line {
+  width: 35px;
+  height: 1px;
+  flex-shrink: 0;
+  background: #829176;
+}
+
+.subscription-promise p {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #53674a;
+}
+
+/* ------------------------------------------
+   PHOTOGRAPHIE PARISIENNE
+------------------------------------------ */
+
+.subscription-visual {
+  position: relative;
+  min-width: 0;
+}
+
+.subscription-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+}
+
+.visual-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 14px;
+}
+
+.visual-caption span:first-child {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #68745d;
+}
+
+.visual-caption span:last-child {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #77786e;
+}
+
+/* ------------------------------------------
+   BLOC D'INSCRIPTION
+------------------------------------------ */
+
+.subscription-form-section {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(35px, 8vw, 110px);
+  align-items: start;
+  padding: 65px 0 75px;
+  border-top: 1px solid #dfe2d8;
+  border-bottom: 1px solid #dfe2d8;
+}
+
+.form-heading {
+  max-width: 440px;
+}
+
+.form-number {
+  display: block;
+  margin-bottom: 18px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: #78856d;
+}
+
+.form-heading h2 {
+  margin: 0 0 17px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(29px, 3.5vw, 42px);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #30332b;
+}
+
+.form-heading > p {
+  max-width: 390px;
+  margin: 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #686a61;
+}
+
+/* Formulaire */
+
+.subscription-form {
+  width: 100%;
+  padding-top: 8px;
+}
+
+.subscription-form > label:first-child {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #45483f;
+}
+
+.email-field {
+  display: flex;
+  width: 100%;
+  min-height: 54px;
+  border: 1px solid #cfd5c7;
+  background: #fffefa;
+  transition: border-color 0.2s ease;
+}
+
+.email-field:focus-within {
+  border-color: #6b7e5d;
+}
+
+.email-field input {
+  flex: 1;
+  min-width: 0;
+  padding: 15px 16px;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 14px;
+  color: #30332b;
+}
+
+.email-field input::placeholder {
+  color: #a0a196;
+}
+
+.email-field button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 0 19px;
+  border: 0;
+  background: #65775a;
+  color: #fffdf7;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.email-field button:hover {
+  background: #4e6045;
+}
+
+.email-field button:focus-visible {
+  outline: 2px solid #30332b;
+  outline-offset: 3px;
+}
+
+.email-field button span {
+  font-size: 16px;
+}
+
+/* Consentement */
+
+.consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+  color: #686a61;
+  cursor: pointer;
+}
+
+.consent-label input {
+  width: 15px;
+  height: 15px;
+  margin: 3px 0 0;
+  flex-shrink: 0;
+  accent-color: #65775a;
+  cursor: pointer;
+}
+
+/* Mention de confidentialité */
+
+.form-privacy {
+  margin: 16px 0 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #898a80;
+}
+
+/* Message sous le formulaire */
+
+.form-message {
+  margin: 12px 0 0;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+  color: #53674a;
+}
+
+/* ------------------------------------------
+   SIGNATURE DU MAGAZINE
+------------------------------------------ */
+
+.subscription-signoff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 65px 20px 75px;
+  text-align: center;
+}
+
+.signoff-star {
+  margin-bottom: 14px;
+  font-size: 20px;
+  color: #819174;
+}
+
+.subscription-signoff p {
+  margin: 0 0 12px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(22px, 3vw, 30px);
+  font-style: italic;
+  color: #505d47;
+}
+
+.signoff-brand {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+  color: #7b7e72;
+}
+
+/* ------------------------------------------
+   RESPONSIVE — TABLETTES
+------------------------------------------ */
+
+@media (max-width: 800px) {
+  .subscription-hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding: 50px 0 60px;
+  }
+
+  .subscription-copy {
+    max-width: 620px;
+  }
+
+  .subscription-visual {
+    max-width: 540px;
+  }
+
+  .subscription-visual img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .subscription-form-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 45px 0 50px;
+  }
+
+  .form-heading > p {
+    max-width: 560px;
+  }
+
+  .subscription-form {
+    max-width: 600px;
+  }
+}
+
+/* ------------------------------------------
+   RESPONSIVE — TÉLÉPHONES
+------------------------------------------ */
+
+@media (max-width: 480px) {
+  .subscription-page {
+    width: 88%;
+  }
+
+  .subscription-topline {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .subscription-hero {
+    padding: 38px 0 45px;
+  }
+
+  .subscription-copy h1 {
+    font-size: 39px;
+    letter-spacing: -1px;
+  }
+
+  .subscription-intro {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+
+  .subscription-visual img {
+    aspect-ratio: 4 / 5;
+  }
+
+  .subscription-form-section {
+    padding: 38px 0 42px;
+  }
+
+  .email-field {
+    flex-direction: column;
+    gap: 10px;
+    border: 0;
+    background: transparent;
+  }
+
+  .email-field input {
+    min-height: 52px;
+    border: 1px solid #cfd5c7;
+    background: #fffefa;
+  }
+
+  .email-field button {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .subscription-signoff {
+    padding: 48px 10px 55px;
+  }
+}
+
+
+
+
+/* ==========================================
+   EN-TÊTE ÉDITORIAL — ABONNEMENT
+========================================== */
+
+.subscription-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 88%;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 26px 0;
+  border-bottom: 1px solid #e2e3da;
+}
+
+/* Retour à l'accueil */
+
+.subscription-header .back-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #62675a;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.subscription-header .back-home span {
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.subscription-header .back-home:hover {
+  color: #536b49;
+}
+
+.subscription-header .back-home:hover span {
+  transform: translateX(-3px);
+}
+
+/* Signature en haut à droite */
+
+.subscription-header .subscription-logo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(17px, 2vw, 23px);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+  color: #30332b;
+  text-align: right;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.subscription-header .subscription-logo:hover {
+  color: #647658;
+}
+
+/* Adaptation mobile */
+
+@media (max-width: 480px) {
+  .subscription-header {
+    width: 88%;
+    gap: 12px;
+    padding: 21px 0;
+  }
+
+  .subscription-header .back-home {
+    gap: 6px;
+    font-size: 11px;
+  }
+
+  .subscription-header .subscription-logo {
+    font-size: 16px;
+    white-space: normal;
+  }
+}

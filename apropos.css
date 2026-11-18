@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* VARIABLES */
+
+:root {
+  --bg: #fffefa;
+  --text: #292b25;
+  --muted: #6c7067;
+  --green: #536b49;
+  --light-green: #e8ede3;
+  --line: #e3e7de;
+}
+
+/* BASE */
+
+* {
+  box-sizing: border-box;
+}
+
+body.about-page {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+/* EN-TÊTE */
+
+.about-header {
+  min-height: 78px;
+  padding: 16px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.about-back span {
+  font-size: 23px;
+}
+
+.about-back:hover {
+  color: var(--green);
+}
+
+.about-brand {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(20px, 2.8vw, 29px);
+  font-weight: 600;
+  letter-spacing: -.5px;
+  text-decoration: none;
+}
+
+/* INTRODUCTION */
+
+.about-hero {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 85px 24px 35px;
+  text-align: center;
+}
+
+.about-eyebrow,
+.about-section-label {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.about-hero h1 {
+  margin: 18px 0 20px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(40px, 5.5vw, 64px);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -1.3px;
+}
+
+.about-subtitle {
+  max-width: 570px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* GRANDE MOUETTE */
+
+.about-mascot {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 15px 24px 65px;
+  text-align: center;
+}
+
+.about-mascot-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 430px;
+  overflow: hidden;
+}
+
+.about-mascot-frame img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  max-height: 520px;
+  object-fit: contain;
+}
+
+.about-logo-placeholder {
+  display: none;
+  width: 100%;
+  min-height: 360px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #c7d2c0;
+  border-radius: 12px;
+  background: #f4f6f0;
+  color: #74836e;
+}
+
+.about-logo-placeholder span {
+  font-size: 52px;
+}
+
+.about-logo-placeholder p {
+  margin: 12px 0 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.about-mascot-caption {
+  margin: 15px 0 0;
+  color: #7a8074;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 15px;
+  font-style: italic;
+}
+
+/* TEXTE DE PRÉSENTATION */
+
+.about-story {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 60px 24px 90px;
+  border-top: 1px solid var(--line);
+}
+
+.about-story h2 {
+  margin: 17px 0 32px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(31px, 4vw, 43px);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.about-story > p {
+  margin: 0 0 24px;
+  color: #454940;
+  font-size: 16px;
+  line-height: 1.95;
+}
+
+.about-story em {
+  color: var(--green);
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+.about-story .about-signature {
+  margin-top: 40px;
+  color: var(--text);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.9;
+}
+
+.about-signature strong {
+  color: var(--green);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+/* CONTACT */
+
+.about-contact {
+  padding: 75px 24px 85px;
+  background: #edf1e9;
+  text-align: center;
+}
+
+.about-contact h2 {
+  margin: 18px 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(29px, 4vw, 42px);
+  font-weight: 600;
+}
+
+.about-contact > p {
+  max-width: 550px;
+  margin: 0 auto 30px;
+  color: #656c60;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.about-contact-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 15px 25px;
+  border: 1px solid var(--green);
+  border-radius: 4px;
+  background: var(--green);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background .2s, transform .2s;
+}
+
+.about-contact-button:hover {
+  background: #405539;
+  transform: translateY(-2px);
+}
+
+.about-contact-button:focus-visible,
+.about-back:focus-visible,
+.about-brand:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+}
+
+/* FOOTER */
+
+.about-footer {
+  padding: 35px 20px;
+  background: #e0e5dc;
+  text-align: center;
+}
+
+.about-footer a {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.about-footer p {
+  margin: 9px 0 0;
+  color: #697164;
+  font-size: 12px;
+}
+
+/* TABLETTE */
+
+@media (max-width: 900px) {
+  .about-hero {
+    padding-top: 65px;
+  }
+
+  .about-story {
+    padding-top: 50px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .about-header {
+    min-height: 68px;
+    padding: 12px 5%;
+  }
+
+  .about-back {
+    font-size: 11px;
+  }
+
+  .about-brand {
+    font-size: 19px;
+    text-align: right;
+  }
+
+  .about-hero {
+    padding: 52px 20px 25px;
+  }
+
+  .about-hero h1 {
+    font-size: 39px;
+  }
+
+  .about-subtitle {
+    font-size: 15px;
+  }
+
+  .about-mascot {
+    padding: 10px 20px 45px;
+  }
+
+  .about-mascot-frame {
+    min-height: 300px;
+  }
+
+  .about-mascot-frame img {
+    max-width: 310px;
+  }
+
+  .about-logo-placeholder {
+    min-height: 290px;
+  }
+
+  .about-story {
+    padding: 45px 22px 65px;
+  }
+
+  .about-story h2 {
+    font-size: 32px;
+  }
+
+  .about-story > p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+  .about-contact {
+    padding: 60px 22px 70px;
+  }
+
+  .about-contact h2 {
+    font-size: 31px;
+  }
+
+  .about-contact-button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    transition: none !important;
+  }
+}
